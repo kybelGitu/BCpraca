@@ -9,5 +9,6 @@ npm install -g --unsafe-perm node-red
 ```sh
 npm install node-red-contrib-influxdb
 ```
+## Repository contains another Latex doc dir and export json files from Grafana and Node-Red
 
 
