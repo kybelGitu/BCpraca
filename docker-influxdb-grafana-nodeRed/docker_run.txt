@@ -1,0 +1,1 @@
+docker run -d   --name docker-influxdb-grafana  -p 3003:3003  -p 3004:8083   -p 8086:8086   -p 1880:1880   -v /path/for/influxdb:/var/lib/influxdb   -v /path/for/grafana:/var/lib/grafana   bc/added_nodered:latest

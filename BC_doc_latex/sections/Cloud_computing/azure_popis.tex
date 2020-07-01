@@ -1,0 +1,60 @@
+\begin{document}
+
+\subsubsection{Azure}
+Je to cloudová platoforma, ktorá prevádzkuje integráciu cloudových služieb. Pomocou použitia Azure môžme meniť a prispôsobiť aplikáciu podľa potrieb zákazníka. Pre zjednodušenie, manažovania aplikácií je vytvorený Azure portal. Služby podľa odvetví sú rozdelené do týchto kategórií:
+\begin{multicols}{3}
+
+    \begin{itemize}
+        \item AI + Machine Learning
+        \item Analytics
+        \item Blockchain
+        \item Compute
+        \item Containers
+        \item Databases
+        \item Developer Tools
+        \item DevOps
+        \item Hybrid
+        \item Identity
+        \item Integration
+        \item Internet of Things
+        \item Management \\and Governance
+        \item Media
+        \item Migration
+        \item Mixed Reality
+        \item Mobile
+        \item Networking
+        \item Security
+        \item Storage
+        \item Web
+        \item Windows Virtual\\ Desktop
+    
+    \end{itemize}
+ %ked tak pridat linky   
+\end{multicols}
+Niekoľko odporúčaných služieb vhodných pre použitie aplikácie:
+\begin{description}
+    \item[Azure App Service] je vhodné pre vytvorenie webových aplikácií, backendy mobilných aplikácií a API a migráciu už existujúcich aplikácií.
+    Platforma poskytuje autentifikáciu pomocou sociálnych poskytovateľov, škálovateľnosť podľa zaťaženia, testovanie a nasadenie nepretržitých kontajnerov.
+    \item[Azure Virtual Machines] je Infrastructure as a Service (IaaS) služba. Je možné nasadenie na Linuxovom alebo Windowsovom  virtuálnom stroji. Klient je sa stará o všetky požiadavky na virtuálnom stroji (inštalácia softvéru, konfigurácia, údržba a aktualizácia. Je možné spustiť množstvo záťažových testov. Odporúčané použitie pri potrebe kontroly nad celou infraštruktúrou.
+    \item[Azure Functions (serverless)]  - vhodné pre priame spustenie kódu bez nastavovania infraštruktúry. Na použitie je množstvo programovacích jazykov ako C\#, F\#, Node.js, Python, alebo PHP. Platí sa iba za čas, v ktorom bol vykonávaný kód. Vhodné pri skúšaní len časti aplikácie.
+    \item[Azure Service Fabric] je platforma distribuovaných systémov. Umožňuje budovanie package a nasadenie mikroservisov. Poskytuje schopnosti zabezpečenia služieb, nasadenia, monitorovania, aktualizácie a odstránenia. Aplikácie sú spúšťané na celých adresároch, je možné štartovať množstvo menších strojov podľa potreby. Vhodné pri použití mikroservisovej architektúry.
+    \item[Docker podpora] umožňuje použitie kontajnerov Docker, čo je určitá forma virtualizácie operačných systémov. Pomocou Dockera je možné vytvoriť aplikáciu viac účinnejšie a predvídateľnejšie. Sú dostupné bežné Docker nástroje pre manažovanie kontajnerov. Použitie kontajnerov je možné viacerými spôsobmi:
+    \begin{description}
+        \item[Azure Docker VM extension:]
+            Nastavenie virtuálneho stroja s Docker nástrojmi ako Docker host
+        \item[Azure Kubernetes Service:]
+        Umožňuje vytvoriť, nastavať a manažovať klaster virtuálnych strojov, ktoré sú prednastavené na spustenie kontajnerizovaných aplikácií. Vhodné pri použití prostredia pripraveného pre produkcie alebo pri použití technológie Docker Swarm cluster.
+        \item[Docker Machine:] Umožňuje použitie a manažovanie deamonu Docker Engine na virtuálnom stroji. Vhodné pre rýchle prototypovanie aplikácie na jednom vytvorenom Docker hoste.
+        \item[Custom Docker image for App Service] umožňuje použitie Docker kontajnera z registra kontajnerov alebo užívateľského kontajneru pri nasadení web-aplikácie na linuxe.
+    \end{description}
+\end{description}
+\paragraph{Autentifikácia} je možná buď pomocou Azure Active Directory (Azure AD), kde sa využívajú tokeny a ďalšie služby (SSO - single-sign on, Graph-based data) alebo pomocou autentifikácie služby aplikácie.% ???
+
+Po spustení aplikácie je možné ju monitorovať pomocou monitorovacích funkcií. Je možné používanie populárnych DevOps nástrojov (Jenkins,GitHub,Puppet,Chef,TeamCity,Ansible,Azure, DevOps). Azure platforma je rozdelená do niekoľkých dáta centier po celom svete čím sa docieli zníženie latencie aplikácie. Manažovanie Azure resources je možné pomocou prostredia Azure portal, Command-line rozhrania alebo PowerShellu. Je využiteľná aj množina REST APIs, ktorými je tvorený Azure pre podporu Azure portalu.
+Azure Resource Manager umožňuje triediť Azure Resources do skupín pre lepší manažment.\cite{azure}
+\paragraph{Klientské účty a poplatky: }
+Približné mesačne náklady je možné vypočítať cez virtuálnu kalkulačku na stránke \url{https://azure.microsoft.com/en-us/pricing/calculator/}. Pre študenta je možné využiť kredit 100\$ po dobu 12 mesiacov.\cite{azure_student}
+
+
+
+\end{document}

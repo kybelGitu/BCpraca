@@ -1,0 +1,13 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\pagebreak
+\section{Záver}
+V práci som pracoval na tvorbe monitorovacieho systému fyzikálneho laboratória, kde sa mi podarilo ukladať merania v cloude ako záložný systém pre systém pracujúci v laboratóriách. Pre vizualizáciu je použitá platforma Grafany, ktorá využíva platformu DB InfluxDB, kde sú ukladané dáta meraní. Tieto platformy sú spustené v kontajnerizovanom prostredí Docker. Namerané údaje je možné porovnávať so získanými nameranými údajmi okolitých sietí staníc monitorovania dávkového príkonu ekvivalentu gama žiarenia v ovzduší.
+\par Dáta sú posielané cez sieť WiFi, čo by bolo vhodné nahradiť inou technológiou vhodnou pre platformu IoT. Vhodné by bolo použitie technológie, ktorá by nebola závislá od fakultnej siete, vzhľadom k vyskytujúcim sa výpadkom v minulosti, ktoré sú zaznamenané na meraniach, vykonávajúcich sa v laboratóriu. Doporučovaná mi bola technológia LoRaWAN.
+\par Systému sa treba postarať o zabezpečenie databázy a komunikácií s IoT zariadeniami. Ktoré nieje v súčastnosti skoro žiadne. Vzhľadom aj na to, že systém doposiaľ bol spustený na privátnej sieti
+\par Pre využite služby Azure bol využitý predplatný balíček pre študentov, kde je možné využiť kredit 100\$. Súčasné mesačné náklady použitej služby sa pohybovali okolo 35\$. Pri použití cloudových služieb som zaregistroval, aké podstatné je monitorovanie serverových systémov, kde si užívateľ môže meniť konfiguráciu systému podľa vlastných potrieb. Aplikácia bežiaca na báze kontajnera dokázala znížiť záťaž stroja, na ktorom je spustený na minimum vzhľadom na to, že stačí použiť jadro nejakého mikro operačného systému, a pridať len potrebné závislé balíčky, ktoré vyžaduje potrebná technológia. Kontajner, ktorý som použil, som mohol spustiť ako na svojom lokálnom PC, tak aj v prostredí cloudu. Prostredie Azure ponúka obrovské množstvo nástrojov pre využitie IT riešení, ktoré sa používajú v súčastnosti.
+\par Vzhľadom na pandemickú situáciu v aktuálnom semestri som nemohol pracovať so zariadeniami z laboratória. Vzhľadom na to, že sa v laboratóriu vykonávajú aj prerábacie práce, boli prístroje z laboratória, ku ktorým som mal prístup vypnuté a nemal som možnosť dostať sa k niektorým potrebným dátam.
+
+Zdrojové kódy budú dodané na \url{https://github.com/kybelGitu/BCpraca} a práca bolo písaná v prostredí \LaTeX.
+\end{document}

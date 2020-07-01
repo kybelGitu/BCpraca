@@ -1,0 +1,38 @@
+\documentclass[../main.tex]{subfiles} %kvoli pridani preambluly
+
+\newpage
+\thispagestyle{empty} 
+\begin{document}
+\newpage
+\vspace*{6cm}
+\section*{Abstract}
+
+% \addcontentsline{toc}{section}{\protect\numberline{}Anotácia}%
+
+\noindent
+
+
+\begingroup
+\setlength{\tabcolsep}{12pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.3} % Default value: 1
+\begin{table}[h!]
+\begin{tabular}{ l l  }
+Name of thesis: &  Monitoring system for nuclear and physical engineering laboratory \\
+Keywords:  &  IoT, Grafana, kontajner, Esp32, Azure, MicroPython \\
+\end{tabular}
+\end{table}
+\endgroup
+
+ The purpose of the thesis is to familiarize with IoT (Internet of Things).
+This topic aims with monitoring, sensing various physical quantities and phenomena and subsequently  sending instructions to actuators whose then make his task.
+These can be a different electronically controlled unit, sensors or sensors with added microcontrollers.
+By the microcontrollers can be send the acquired data to the network.
+These devices are also suitably used in the laboratory of nuclear-physical engineering, where are realized measurements. Some are performed continuous.
+In such laboratories, radioactive materials with low activity are used, which can locally increase the equivalent dose rate of gamma radiation, which is monitored, during measurements. By the rise of the dose rate of gamma radiation it is necessarily to sending notifications. For inspection, the measured data can be compared with data from other nearby stations,
+whose data are freely available on the internet.
+The next problem can be saving and processing the data.
+An error can occur during storage, for example: Power failure, memory error, disk failure, or a problem with the processor that results in an increase in temperature.
+
+    
+
+\end{document}

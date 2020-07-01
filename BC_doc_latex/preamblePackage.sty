@@ -1,0 +1,65 @@
+\ProvidesPackage{preamblePackage}
+
+
+
+
+%%%%%%%%%%%%%%%%    PACKAGES    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    PACKAGES    %%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx} %package to manage images
+\graphicspath{ {/images/}{../images/}{../../images/}  }%iamges folder
+
+\usepackage{url}
+\def\UrlBreaks{\do\/\do-}
+\usepackage{breakurl}
+\usepackage[breaklinks]{hyperref}
+\usepackage{microtype }%pretekanie textu
+\usepackage{indentfirst}
+\usepackage{dirtytalk}%citacie say
+\usepackage{wrapfig}
+\usepackage{svg}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc} 
+\usepackage{textcomp}
+\usepackage{subfiles} % Best loaded last in the preamble
+\usepackage{multicol}
+\usepackage[none]{hyphenat}
+\usepackage{hyperref}
+\usepackage{pdfpages}
+\usepackage{import}
+\usepackage{indentfirst}%spravit odseky
+\usepackage[slovak]{babel}
+
+%%%%%%%%%%%%%%%%    PAGE LAYOUT    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    PAGE LAYOUT    %%%%%%%%%%%%%%%%
+\setlength\hoffset{-14mm}
+\setlength\textwidth{177mm}
+\setlength\textheight{247mm}
+\setlength\oddsidemargin{5mm}
+\setlength\evensidemargin{5mm}
+\setlength\topmargin{0mm}
+\setlength\headsep{0mm}
+\setlength\headheight{0mm}
+\let\openright=\clearpage
+
+
+\makeatletter
+\newcommand{\checkheight}[1]{%
+  \par \penalty-100\begingroup%
+  \setbox8=\hbox{#1}%
+  \setlength{\dimen@}{\ht8}%
+  \dimen@ii\pagegoal \advance\dimen@ii-\pagetotal
+  \ifdim \dimen@>\dimen@ii
+    \break
+  \fi\endgroup}
+\makeatother
+
+
+
+% \hoffset = -50pt
+
+\setlength{\parindent}{2em}
+% \setlength{\parskip}{1em}
+\renewcommand{\baselinestretch}{1.5}
+
+\renewcommand{\thesection}{\arabic{section}}%arabske pocitanie
+
+\graphicspath{{./images/}} %treba 2x{}
+

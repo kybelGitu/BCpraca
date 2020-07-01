@@ -1,0 +1,32 @@
+\documentclass[../main.tex]{subfiles} %kvoli pridani preambluly
+
+\newpage
+\thispagestyle{empty} 
+\begin{document}
+\newpage
+\vspace*{6cm}
+\section*{Anotácia}
+
+% \addcontentsline{toc}{section}{\protect\numberline{}Anotácia}%
+
+\noindent
+% \begin{flushleft}
+
+\begingroup
+\setlength{\tabcolsep}{12pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.3} % Default value: 1
+\begin{table}[h!]
+\begin{tabular}{ l l  }
+Názov práce: &  Monitorovací system laboratorií jadrového a fyzikálného inžinierstva  \\
+Kľúčové slová:  &  IoT, Grafana, kontajner, Esp32, Azure, MicroPython \\
+\end{tabular}
+\end{table}
+\endgroup
+% Text anotácie. Anotácia obsahuje informáciu o cieľoch práce, jej stručnom obsahu a v závere sa  charakterizuje splnenie zadania ZP, výsledky a význam celej práce.  Píše sa súvisle ako jeden odsek a jej rozsah je spravidla 100  až 500 slov.
+
+Cieľom práce je oboznámenie sa s princípom v oblasti IoT (Internetu Vecí). Do tejto oblasti patrí monitorovanie, snímanie rôznych fyzikálnych veličín a javov a následne posielanie inštrukcií pre akčné členy, ktoré vykonajú následne svoju činnosť. Môžu to byť senzory alebo snímače s pridanými mikrokontrolérmi. Pomocou nich dokážu získané dáta poslať ďalej do siete. Takéto zariadenia sú vhodne použité aj v laboratóriu jadrovo-fyzikálneho inžinierstva, v ktorom prebiehajú merania, niektoré sú vykonávané aj bez prestávky. V takýchto laboratóriách sa pracuje s rádioaktívnymi materiálmi s nízkou aktivitou, ktoré môžu počas meraní lokálne zvýšiť ekvivalentný dávkový príkon gama žiarenia, ktorý je monitorovaný. Pri jeho zvýšení nad kritickú hodnotu alebo prudkom raste treba oznámiť udalosť pomocou určitej notifikácie. Pre kontrolu sa namerané údaje môžu porovnať s údajmi z ďalších okolitých monitoravacích staníc, ktorých dáta sú voľne dostupné na internete.  Ďalším problémom môže byť ukladanie a spracovanie vyhodnotených dát. Pri ukladaní môže dôjsť k chybe, napríklad: Porucha napájania, pamäťová chyba, porucha disku prípadne problém s procesorom, ktorý sa prejaví zvyšovaním teploty.
+
+% \end{flushleft}
+    
+
+\end{document}

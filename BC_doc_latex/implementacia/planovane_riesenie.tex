@@ -1,0 +1,17 @@
+\begin{document}
+
+\subsection{Riešenie}
+V pláne bolo vyhotovenie monitorovacieho systému pre laboratórium jadorovo-fyzikálneho inžinierstva, v ktorom nepretržite prebiehajú merania. Išlo o ukladanie niektorých meraní a porovnanie s ostatnými podobnými dostupnými meraniami. Ďalej bolo treba monitorovať stav strojov do ktorých sa tieto merania ukladali a v  prípade poruchy, alebo prekračujúcich hodnôt odoslať upozornenie.
+\subsubsection{Infraštruktúra systémov nachádzajúcich sa v laboratóriu}
+\begin{multicols}{2}
+    \begin{itemize}
+        \item Mikrotik CRS326-24G-2S
+        \item diskové pole QNAP TS-431XeU
+        \item ESP32 moduly
+        \item senzory BMP280 a SHT21 
+    \end{itemize}
+\end{multicols}
+Na routri beží NAT, je možné sa tam pripojiť cez VPN. Jeho adresa je \url{147.175.96.26} Na diskovom poli QNAP je možné spúšťanie Docker a LXC kontajnerov. Sú tam spustené kontajnerizované aplikácie Grafany a InfluxDB (v pláne je aj Telegraf), a cez QIoTSuite Lite aplikáciu je spustený Node-Red . Boli sem ukladané dáta o teplote, tlaku a vlhkosti. Na ESP32 moduloch beží MikroPython, ktorý pomocou I²C zbernice načítava hodnoty zo senzorov cez Wi-Fi priamo do InfluxDB na QNAPE. Cez NodeRed sú každú hodinu získavané dáta z rakúskych staníc. Ďalší skript získava dáta z maďarských staníc. Dáta zo slovenských staníc sú nespoľahlivé. Bolo by vhodné skúsiť získavať dáta aj z SHMU.SK. QNAP máva niekedy problémy s pamäťou - jeho parametre: 2 Giga RAM, 4 jadrový arm procesor 1.75 Ghz Anapurna Quadcore A15. Z histórie nameraných dát je zistené že dochádza aj k výpadkom elektrickej energie v laboratóriu. Je navrhnuté riešenie vyskúšať cloudovú službu. Sú vybrané služby od poskytovateľa  Azure. Služba bola vybraná z ponuky Github študentských balíčkov: \url{https://education.github.com/pack#offers}. Vzhľadom na konkurenciu, nie je potrebné zadávať bankovú kartu pre registráciu a  kredit 100\$ pre podobnú službu ako beží na QNAPe vyzerá byť dostatočný na niekoľko mesiacov. Objaví sa aj návrh využiť infraštruktúru siete LoRaWAN. Keďže sa laboratórium stáva neprístupné, vrátane vypnutých strojov, bude treba začať vytvárať prostredie na lokálnom počítači. 
+
+
+\end{document}
